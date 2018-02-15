@@ -10,8 +10,7 @@ const userRoutes = require('./api/routes/users')
 
 //' + process.env.MONGO_ATLAS_PW + '
 mongoose.connect(
-    //'mongodb://node-backend:node-backend@cluster-test-shard-00-00-e3q6p.mongodb.net:27017,cluster-test-shard-00-01-e3q6p.mongodb.net:27017,cluster-test-shard-00-02-e3q6p.mongodb.net:27017/admin?replicaSet=Cluster-test-shard-0&ssl=true', 
-    'mongodb://node-backend:' + process.env.MONGO_ATLAS_PW + '@cluster-test-shard-00-00-e3q6p.mongodb.net:27017,cluster-test-shard-00-01-e3q6p.mongodb.net:27017,cluster-test-shard-00-02-e3q6p.mongodb.net:27017/test?ssl=true&replicaSet=Cluster-test-shard-0&authSource=admin',
+    'mongodb://node-backend:' + process.env.MONGO_ATLAS_PW + '[clustername_link]',
     {
         useMongoClient: true
     }
